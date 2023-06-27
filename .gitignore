@@ -2,5 +2,5 @@ out
 tmp
 **/*.cbuild.yml
 **/*.cprj
-**/cbuil-idx.yml
+**/cbuild-idx.yml
 .clangd
