@@ -1,0 +1,6 @@
+out
+tmp
+**/*.cbuild.yml
+**/*.cprj
+**/cbuil-idx.yml
+.clangd

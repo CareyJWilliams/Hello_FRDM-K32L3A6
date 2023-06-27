@@ -1,0 +1,50 @@
+project:
+  groups:
+    - group: Application
+      files:
+        - file: hello.c
+    - group: Board
+      files:
+        - file: Board/main.c
+        - file: Board/retarget_stdio.c
+        - file: Board/pin_mux.c
+        - file: Board/pin_mux.h
+        - file: Board/board.c
+        - file: Board/board.h
+        - file: Board/clock_config.c
+        - file: Board/clock_config.h
+    - group: doc
+      files:
+        - file: README.md
+    - group: Scatter File
+      files:
+        - file: K32L3A60xxx_cm4_flash.scf
+    - group: MCUXpresso
+      files:
+        - file: ./hello_world.mex
+  components:
+    - component: CMSIS:CORE
+    - component: CMSIS:RTOS2:Keil RTX5&Source
+
+    - component: CMSIS-Compiler:I/O:STDOUT&User
+
+    - component: NXP::Device:CMSIS:K32L3A60_header
+    - component: NXP::Device:CMSIS:K32L3A60_system
+    - component: NXP::Device:SDK Drivers:clock
+    - component: NXP::Device:SDK Drivers:common
+    - component: NXP::Device:SDK Drivers:gpio
+    - component: NXP::Device:SDK Drivers:lists
+    - component: NXP::Device:SDK Drivers:lpuart
+    - component: NXP::Device:SDK Drivers:lpuart_adapter
+    - component: NXP::Device:SDK Drivers:msmc
+    - component: NXP::Device:SDK Drivers:port
+    - component: NXP::Device:SDK Utilities:assert
+    - component: NXP::Device:SDK Utilities:debug_console
+    - component: NXP::Device:SDK Utilities:serial_manager
+    - component: NXP::Device:SDK Utilities:serial_manager_uart
+    - component: NXP::Device:Startup
+
+  output:
+    type:
+      - elf
+      - hex
